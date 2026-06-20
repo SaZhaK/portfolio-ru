@@ -1,7 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
 import {
-  Moon,
-  Sun,
   Download,
   Menu,
   X,
@@ -13,8 +11,6 @@ import { config } from '@/portfolio.config';
 import { ShareModal } from '@/components/ShareModal';
 
 interface NavbarProps {
-  theme: string;
-  onToggleTheme: () => void;
   topOffset: number;
 }
 
@@ -47,7 +43,7 @@ const sectionIds = allNavLinks.map((l) => l.id);
 
 const blogEnabled = config.blog?.enabled ?? false;
 
-export function Navbar({ theme, onToggleTheme, topOffset }: NavbarProps) {
+export function Navbar({ topOffset }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string>('');
@@ -280,39 +276,6 @@ export function Navbar({ theme, onToggleTheme, topOffset }: NavbarProps) {
             data-testid="button-share-nav"
           >
             <Share2 size={16} />
-          </button>
-
-          <button
-            onClick={onToggleTheme}
-            className="border-border hover:border-primary/40 bg-secondary/50 hover:bg-secondary text-muted-foreground hover:text-foreground overflow-hidden rounded-full border p-2 transition-all"
-            aria-label="Toggle theme"
-            data-testid="button-toggle-theme"
-          >
-            <AnimatePresence mode="wait" initial={false}>
-              {theme === 'dark' ? (
-                <motion.span
-                  key="sun"
-                  initial={{ rotate: -90, opacity: 0, y: 8 }}
-                  animate={{ rotate: 0, opacity: 1, y: 0 }}
-                  exit={{ rotate: 90, opacity: 0, y: -8 }}
-                  transition={{ duration: 0.22 }}
-                  className="block"
-                >
-                  <Sun size={16} />
-                </motion.span>
-              ) : (
-                <motion.span
-                  key="moon"
-                  initial={{ rotate: 90, opacity: 0, y: 8 }}
-                  animate={{ rotate: 0, opacity: 1, y: 0 }}
-                  exit={{ rotate: -90, opacity: 0, y: -8 }}
-                  transition={{ duration: 0.22 }}
-                  className="block"
-                >
-                  <Moon size={16} />
-                </motion.span>
-              )}
-            </AnimatePresence>
           </button>
 
           {config.resumeUrl ? (

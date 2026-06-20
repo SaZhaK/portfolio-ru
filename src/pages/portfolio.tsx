@@ -19,8 +19,6 @@ import { config } from '@/portfolio.config';
 import type { SectionId } from '@/portfolio.config';
 
 interface PortfolioPageProps {
-  theme: string;
-  onToggleTheme: () => void;
   topOffset: number;
 }
 
@@ -113,18 +111,10 @@ function SectionWrapper({
 
 // ── Page ────────────────────────────────────────────────────────────────────
 
-export function PortfolioPage({
-  theme,
-  onToggleTheme,
-  topOffset,
-}: PortfolioPageProps) {
+export function PortfolioPage({ topOffset }: PortfolioPageProps) {
   return (
     <div className="bg-background text-foreground min-h-screen">
-      <Navbar
-        theme={theme}
-        onToggleTheme={onToggleTheme}
-        topOffset={topOffset}
-      />
+      <Navbar topOffset={topOffset} />
       <Hero />
       <GitHubStats />
       {config.sections

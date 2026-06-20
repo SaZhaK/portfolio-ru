@@ -9,8 +9,6 @@ import {
   Globe,
   Lock,
   ChevronDown,
-  Sun,
-  Moon,
   Github,
   Check,
   Rss,
@@ -332,12 +330,7 @@ function BlogMockup() {
 
 // ─── Main landing page ──────────────────────────────────────────────────────────
 
-interface LandingPageProps {
-  theme: string;
-  onToggleTheme: () => void;
-}
-
-export function LandingPage({ theme, onToggleTheme }: LandingPageProps) {
+export function LandingPage() {
   return (
     <div className="bg-background text-foreground min-h-screen">
       {/* ── Navbar ───────────────────────────────────────────────────────── */}
@@ -356,13 +349,6 @@ export function LandingPage({ theme, onToggleTheme }: LandingPageProps) {
               <FaGithub size={24} className="text-primary" />
               Star on GitHub
             </a>
-            <button
-              onClick={onToggleTheme}
-              className="hover:bg-secondary text-muted-foreground hover:text-foreground rounded-lg p-2 transition-colors"
-              aria-label="Toggle theme"
-            >
-              {theme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
-            </button>
             <a
               href="#/demo"
               className="text-muted-foreground hover:text-foreground hidden text-xs transition-colors sm:block"

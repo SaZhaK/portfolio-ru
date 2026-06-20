@@ -29,12 +29,8 @@ const BlogPostPage = lazy(() =>
 const IS_DEMO = import.meta.env.VITE_DEMO_MODE === 'true';
 
 function PortfolioWithChrome({
-  theme,
-  toggleTheme,
   showDemoBanner,
 }: {
-  theme: string;
-  toggleTheme: () => void;
   showDemoBanner: boolean;
 }) {
   const [demoBannerVisible, setDemoBannerVisible] = useState(
@@ -57,56 +53,24 @@ function PortfolioWithChrome({
         className="transition-[padding] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"
         style={{ paddingTop: `${totalTopOffset}px` }}
       >
-        <PortfolioPage
-          theme={theme}
-          onToggleTheme={toggleTheme}
-          topOffset={totalTopOffset}
-        />
+        <PortfolioPage topOffset={totalTopOffset} />
       </div>
     </SmoothScrollProvider>
   );
 }
 
 function App() {
-  const [theme, setTheme] = useState<string>(() => {
-    const stored = localStorage.getItem('portfolio-theme');
-    if (stored) return stored;
-    if (config.defaultTheme === 'system') {
-      return window.matchMedia('(prefers-color-scheme: dark)').matches
-        ? 'dark'
-        : 'light';
-    }
-    return config.defaultTheme;
-  });
-
   useEffect(() => {
-    const root = document.documentElement;
-    const isDark = theme === 'dark';
-    if (isDark) root.classList.add('dark');
-    else root.classList.remove('dark');
-    localStorage.setItem('portfolio-theme', theme);
+    document.documentElement.classList.add('dark');
     const palette = config.primaryColor
       ? hexToPresetPalette(config.primaryColor)
       : config.customColors;
     applyThemePalette(
       config.primaryColor ? 'custom' : config.colorPreset,
-      isDark,
-      palette
-    );
-  }, [theme]);
-
-  useEffect(() => {
-    const palette = config.primaryColor
-      ? hexToPresetPalette(config.primaryColor)
-      : config.customColors;
-    applyThemePalette(
-      config.primaryColor ? 'custom' : config.colorPreset,
-      theme === 'dark',
+      true,
       palette
     );
   }, []);
-
-  const toggleTheme = () => setTheme((t) => (t === 'dark' ? 'light' : 'dark'));
 
   return (
     <MotionConfig reducedMotion="user">
@@ -126,7 +90,7 @@ function App() {
             {/* Resume page — always accessible */}
             <Route path="/resume">
               <CustomCursor />
-              <ResumePage theme={theme} onToggleTheme={toggleTheme} />
+              <ResumePage />
             </Route>
 
             {/* Setup wizard */}
@@ -136,23 +100,15 @@ function App() {
 
             {/* Demo portfolio — always accessible at #/demo */}
             <Route path="/demo">
-              <PortfolioWithChrome
-                theme={theme}
-                toggleTheme={toggleTheme}
-                showDemoBanner={IS_DEMO}
-              />
+              <PortfolioWithChrome showDemoBanner={IS_DEMO} />
             </Route>
 
             {/* Root — landing page or portfolio depending on siteMode */}
             <Route>
               {config.siteMode === 'landing' ? (
-                <LandingPage theme={theme} onToggleTheme={toggleTheme} />
+                <LandingPage />
               ) : (
-                <PortfolioWithChrome
-                  theme={theme}
-                  toggleTheme={toggleTheme}
-                  showDemoBanner={IS_DEMO}
-                />
+                <PortfolioWithChrome showDemoBanner={IS_DEMO} />
               )}
             </Route>
           </Switch>

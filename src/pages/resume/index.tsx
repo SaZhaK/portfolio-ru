@@ -20,10 +20,6 @@ import { ShareModal } from '@/components/ShareModal';
 
 type Layout = 'two-column' | 'classic';
 
-interface ResumePageProps {
-  theme: string;
-  onToggleTheme: () => void;
-}
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -422,7 +418,7 @@ function ClassicLayout() {
 
 // ─── Main page ────────────────────────────────────────────────────────────────
 
-export function ResumePage({ theme, onToggleTheme }: ResumePageProps) {
+export function ResumePage() {
   const [layout, setLayout] = useState<Layout>(() => {
     return (localStorage.getItem('resume-layout') as Layout) ?? 'two-column';
   });
@@ -439,18 +435,18 @@ export function ResumePage({ theme, onToggleTheme }: ResumePageProps) {
       layout === 'two-column'
         ? config.resumeTheme.twoColumn
         : config.resumeTheme.classic;
-    applyThemePalette(preset, theme === 'dark', config.customColors);
+    applyThemePalette(preset, true, config.customColors);
     return () => {
       const palette = config.primaryColor
         ? hexToPresetPalette(config.primaryColor)
         : config.customColors;
       applyThemePalette(
         config.primaryColor ? 'custom' : (config.colorPreset as any),
-        theme === 'dark',
+        true,
         palette
       );
     };
-  }, [layout, theme]);
+  }, [layout]);
 
   return (
     <div className="bg-muted/40 min-h-screen print:min-h-0 print:bg-white">
