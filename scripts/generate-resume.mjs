@@ -44,7 +44,7 @@ function parseLocation(str = "") {
 
 /** Build JSON Resume profiles array from social map */
 function buildProfiles(social = {}) {
-  const map = { github: "GitHub", linkedin: "LinkedIn", twitter: "Twitter", website: "Website" };
+  const map = { github: "GitHub", vk: "VK", telegram: "Telegram", twitter: "Twitter", website: "Website" };
   return Object.entries(map)
     .filter(([key]) => social[key])
     .map(([key, network]) => ({

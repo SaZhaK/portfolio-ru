@@ -6,7 +6,7 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog';
 import { Copy, CheckCircle, Download, Mail, QrCode, Link2 } from 'lucide-react';
-import { FaLinkedin, FaXTwitter } from 'react-icons/fa6';
+import { FaVk, FaTelegram, FaXTwitter } from 'react-icons/fa6';
 import { config } from '@/portfolio.config';
 import QRCodeLib from 'qrcode';
 
@@ -87,7 +87,8 @@ export function ShareModal({ open, onClose }: ShareModalProps) {
     a.click();
   };
 
-  const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(portfolioUrl)}`;
+  const vkUrl = `https://vk.com/share.php?url=${encodeURIComponent(portfolioUrl)}&title=${encodeURIComponent(pageTitle)}`;
+  const telegramUrl = `https://t.me/share/url?url=${encodeURIComponent(portfolioUrl)}&text=${encodeURIComponent(`Посмотрите моё портфолио 👋`)}`;
   const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(`Посмотрите моё портфолио 👋`)}&url=${encodeURIComponent(portfolioUrl)}`;
   const emailUrl = `mailto:?subject=${encodeURIComponent(`Портфолио — ${config.name}`)}&body=${encodeURIComponent(`Привет,\n\nПосмотрите моё портфолио:\n${portfolioUrl}`)}`;
 
@@ -146,12 +147,20 @@ export function ShareModal({ open, onClose }: ShareModalProps) {
             </p>
             <div className="flex flex-wrap gap-2">
               <a
-                href={linkedInUrl}
+                href={vkUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border-border flex items-center gap-1.5 rounded-xl border px-3.5 py-2 text-xs font-medium transition-all hover:border-[#0A66C2]/40 hover:bg-[#0A66C2]/10 hover:text-[#0A66C2]"
+                className="border-border flex items-center gap-1.5 rounded-xl border px-3.5 py-2 text-xs font-medium transition-all hover:border-[#0077FF]/40 hover:bg-[#0077FF]/10 hover:text-[#0077FF]"
               >
-                <FaLinkedin size={13} /> LinkedIn
+                <FaVk size={13} /> VK
+              </a>
+              <a
+                href={telegramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-border flex items-center gap-1.5 rounded-xl border px-3.5 py-2 text-xs font-medium transition-all hover:border-[#229ED9]/40 hover:bg-[#229ED9]/10 hover:text-[#229ED9]"
+              >
+                <FaTelegram size={13} /> Telegram
               </a>
               <a
                 href={twitterUrl}

@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Download, MapPin, Phone, ArrowDown } from 'lucide-react';
-import { FaGithub, FaLinkedin, FaXTwitter } from 'react-icons/fa6';
+import { FaGithub, FaVk, FaTelegram, FaXTwitter } from 'react-icons/fa6';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { config } from '@/portfolio.config';
 
@@ -191,16 +191,28 @@ export function Hero() {
               <FaGithub size={18} />
             </a>
           )}
-          {config.social.linkedin && (
+          {config.social.vk && (
             <a
-              href={config.social.linkedin}
+              href={config.social.vk}
               target="_blank"
               rel="noopener noreferrer"
               className="border-border text-muted-foreground hover:text-foreground hover:border-primary/40 hover:bg-primary/5 rounded-xl border p-2.5 transition-all"
-              aria-label="LinkedIn"
-              data-testid="link-linkedin"
+              aria-label="VK"
+              data-testid="link-vk"
             >
-              <FaLinkedin size={18} />
+              <FaVk size={18} />
+            </a>
+          )}
+          {config.social.telegram && (
+            <a
+              href={config.social.telegram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-border text-muted-foreground hover:text-foreground hover:border-primary/40 hover:bg-primary/5 rounded-xl border p-2.5 transition-all"
+              aria-label="Telegram"
+              data-testid="link-telegram"
+            >
+              <FaTelegram size={18} />
             </a>
           )}
           {config.social.twitter && (

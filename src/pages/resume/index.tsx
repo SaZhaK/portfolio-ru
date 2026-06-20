@@ -11,7 +11,7 @@ import {
   ExternalLink,
   Share2,
 } from 'lucide-react';
-import { FaGithub, FaLinkedin } from 'react-icons/fa6';
+import { FaGithub, FaVk, FaTelegram } from 'react-icons/fa6';
 import { config } from '@/portfolio.config';
 import { applyThemePalette, hexToPresetPalette } from '@/lib/themes';
 import { ShareModal } from '@/components/ShareModal';
@@ -71,15 +71,26 @@ function ResumeHeader({ compact = false }: { compact?: boolean }) {
               {config.social.github.replace('https://github.com/', '')}
             </a>
           )}
-          {config.social.linkedin && (
+          {config.social.vk && (
             <a
-              href={config.social.linkedin}
+              href={config.social.vk}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-primary flex items-center gap-1 transition-colors"
             >
-              <FaLinkedin size={11} />{' '}
-              {config.social.linkedin.replace('https://linkedin.com/in/', '')}
+              <FaVk size={11} />{' '}
+              {config.social.vk.replace(/https?:\/\/(www\.)?vk\.com\//, '')}
+            </a>
+          )}
+          {config.social.telegram && (
+            <a
+              href={config.social.telegram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary flex items-center gap-1 transition-colors"
+            >
+              <FaTelegram size={11} />{' '}
+              {config.social.telegram.replace(/https?:\/\/t\.me\//, '@')}
             </a>
           )}
           {config.social.website && (

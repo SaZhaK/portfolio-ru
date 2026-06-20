@@ -196,12 +196,19 @@ if (!s.github) {
 } else {
   checkUrl("social.github", s.github);
 }
-if (!s.linkedin) {
-  warn("social.linkedin", "Not set — LinkedIn link will be hidden");
-} else if (s.linkedin.includes(PLACEHOLDER_USERNAME)) {
-  warn("social.linkedin", `Still contains "${PLACEHOLDER_USERNAME}" — replace with your actual LinkedIn handle`);
+if (!s.vk) {
+  warn("social.vk", "Not set — VK link will be hidden");
+} else if (s.vk.includes(PLACEHOLDER_USERNAME)) {
+  warn("social.vk", `Still contains "${PLACEHOLDER_USERNAME}" — replace with your actual VK handle`);
 } else {
-  checkUrl("social.linkedin", s.linkedin);
+  checkUrl("social.vk", s.vk);
+}
+if (!s.telegram) {
+  warn("social.telegram", "Not set — Telegram link will be hidden");
+} else if (s.telegram.includes(PLACEHOLDER_USERNAME)) {
+  warn("social.telegram", `Still contains "${PLACEHOLDER_USERNAME}" — replace with your actual Telegram handle`);
+} else {
+  checkUrl("social.telegram", s.telegram);
 }
 if (s.twitter)  checkUrl("social.twitter",  s.twitter);
 if (s.website)  checkUrl("social.website",  s.website);

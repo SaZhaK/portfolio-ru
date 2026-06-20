@@ -10,7 +10,7 @@ import {
   AlertCircle,
   Sparkles,
 } from 'lucide-react';
-import { FaGithub, FaLinkedin, FaXTwitter } from 'react-icons/fa6';
+import { FaGithub, FaVk, FaTelegram, FaXTwitter } from 'react-icons/fa6';
 import { config } from '@/portfolio.config';
 import { ShareModal } from '@/components/ShareModal';
 import { ChangelogModal } from '@/components/ChangelogModal';
@@ -260,16 +260,28 @@ export function Contact() {
                 <FaGithub size={18} />
               </a>
             )}
-            {config.social.linkedin && (
+            {config.social.vk && (
               <a
-                href={config.social.linkedin}
+                href={config.social.vk}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border-border text-muted-foreground hover:text-foreground hover:border-primary/40 hover:bg-primary/5 rounded-xl border p-3 transition-all"
-                aria-label="LinkedIn"
-                data-testid="link-footer-linkedin"
+                aria-label="VK"
+                data-testid="link-footer-vk"
               >
-                <FaLinkedin size={18} />
+                <FaVk size={18} />
+              </a>
+            )}
+            {config.social.telegram && (
+              <a
+                href={config.social.telegram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-border text-muted-foreground hover:text-foreground hover:border-primary/40 hover:bg-primary/5 rounded-xl border p-3 transition-all"
+                aria-label="Telegram"
+                data-testid="link-footer-telegram"
+              >
+                <FaTelegram size={18} />
               </a>
             )}
             {config.social.twitter && (
