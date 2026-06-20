@@ -131,7 +131,7 @@ skills:
   - category: "Архитектура"
     items: [SOA, DDD, Clean Architecture, Layered Architecture]
   - category: "Языки"
-    items: [Java, Kotlin, Python, JavsScript (TypeScript)]
+    items: [Java, Kotlin, Python, JavaScript (TypeScript)]
   - category: "Фреймворки"
     items: [Spring Framework 5.x, Spring Boot 3.x, JPA / Hibernate, Angular]
   - category: "Веб"
