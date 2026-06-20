@@ -8,12 +8,10 @@ import {
   Share2,
   CheckCircle,
   AlertCircle,
-  Sparkles,
 } from 'lucide-react';
 import { FaGithub, FaVk, FaTelegram, FaXTwitter } from 'react-icons/fa6';
 import { config } from '@/portfolio.config';
 import { ShareModal } from '@/components/ShareModal';
-import { ChangelogModal } from '@/components/ChangelogModal';
 import { fadeUpVariants } from '@/lib/animation';
 
 const fadeUp = fadeUpVariants(40, 0.75, 0.12);
@@ -22,7 +20,6 @@ type FormStatus = 'idle' | 'sending' | 'success' | 'error';
 
 export function Contact() {
   const [shareOpen, setShareOpen] = useState(false);
-  const [changelogOpen, setChangelogOpen] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -327,41 +324,6 @@ export function Contact() {
           </motion.div>
 
           <ShareModal open={shareOpen} onClose={() => setShareOpen(false)} />
-
-          {/* Footer credit */}
-          <motion.div
-            variants={fadeUp}
-            custom={5}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: '-40px' }}
-            className="border-border/60 w-full border-t pt-8 text-center"
-          >
-            <p className="text-muted-foreground font-mono text-xs tracking-wide">
-              Сделано на{' '}
-              <a
-                href="https://github.com/git-vitae/git-vitae.github.io"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary underline-offset-2 hover:underline"
-              >
-                GitVitae
-              </a>{' '}
-              &mdash; форкните и сделайте своё.
-            </p>
-            <button
-              onClick={() => setChangelogOpen(true)}
-              className="text-muted-foreground/60 hover:text-primary no-print mt-2 inline-flex items-center gap-1.5 text-[11px] transition-colors"
-            >
-              <Sparkles size={10} />
-              Что нового в v1.3
-            </button>
-          </motion.div>
-
-          <ChangelogModal
-            open={changelogOpen}
-            onClose={() => setChangelogOpen(false)}
-          />
         </div>
       </div>
     </footer>
