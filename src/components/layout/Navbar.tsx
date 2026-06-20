@@ -19,17 +19,17 @@ interface NavbarProps {
 }
 
 const SECTION_LABELS: Record<string, string> = {
-  about: 'About',
-  stats: 'Stats',
-  skills: 'Skills',
-  languages: 'Languages',
-  experience: 'Experience',
-  projects: 'Projects',
-  education: 'Education',
-  certifications: 'Certifications',
-  publications: 'Publications',
-  testimonials: 'Testimonials',
-  contact: 'Contact',
+  about: 'Обо мне',
+  stats: 'Статистика',
+  skills: 'Навыки',
+  languages: 'Языки',
+  experience: 'Опыт',
+  projects: 'Проекты',
+  education: 'Образование',
+  certifications: 'Сертификаты',
+  publications: 'Публикации',
+  testimonials: 'Отзывы',
+  contact: 'Контакты',
 };
 
 const allNavLinks = config.sections
@@ -204,7 +204,7 @@ export function Navbar({ theme, onToggleTheme, topOffset }: NavbarProps) {
                     : 'text-muted-foreground hover:text-foreground hover:bg-secondary'
                 }`}
               >
-                More
+                Ещё
                 <motion.span
                   animate={{ rotate: moreOpen ? 180 : 0 }}
                   transition={{ duration: 0.18 }}
@@ -251,7 +251,7 @@ export function Navbar({ theme, onToggleTheme, topOffset }: NavbarProps) {
                         className="text-muted-foreground hover:text-foreground hover:bg-secondary flex items-center gap-2.5 px-4 py-2.5 text-xs font-medium tracking-widest uppercase transition-colors"
                       >
                         <span className="h-1.5 w-1.5 flex-shrink-0" />
-                        Blog
+                        Блог
                       </a>
                     )}
                   </motion.div>
@@ -266,7 +266,7 @@ export function Navbar({ theme, onToggleTheme, topOffset }: NavbarProps) {
               href="#/blog"
               className="text-muted-foreground hover:text-foreground hover:bg-secondary relative rounded-md px-3 py-2 text-xs font-medium tracking-widest whitespace-nowrap uppercase transition-colors"
             >
-              Blog
+              Блог
             </a>
           )}
         </div>
@@ -323,7 +323,7 @@ export function Navbar({ theme, onToggleTheme, topOffset }: NavbarProps) {
               data-testid="button-download-resume-nav"
             >
               <Download size={13} />
-              Resume
+              Резюме
             </a>
           ) : (
             <a
@@ -332,7 +332,7 @@ export function Navbar({ theme, onToggleTheme, topOffset }: NavbarProps) {
               data-testid="button-download-resume-nav"
             >
               <Download size={13} />
-              Resume
+              Резюме
             </a>
           )}
 
@@ -409,7 +409,7 @@ export function Navbar({ theme, onToggleTheme, topOffset }: NavbarProps) {
                   className="text-muted-foreground hover:text-foreground hover:bg-secondary flex items-center gap-2.5 rounded-md px-3 py-3 text-xs font-medium tracking-widest uppercase transition-colors"
                 >
                   <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full" />
-                  Blog
+                  Блог
                 </a>
               )}
               {config.resumeUrl ? (
@@ -418,7 +418,7 @@ export function Navbar({ theme, onToggleTheme, topOffset }: NavbarProps) {
                   download={config.resumeFileName || 'resume.pdf'}
                   className="text-primary hover:bg-accent flex items-center gap-2 rounded-md px-3 py-3 text-xs font-medium tracking-widest uppercase transition-colors"
                 >
-                  <Download size={13} /> Download Resume
+                  <Download size={13} /> Скачать резюме
                 </a>
               ) : (
                 <a
@@ -426,7 +426,7 @@ export function Navbar({ theme, onToggleTheme, topOffset }: NavbarProps) {
                   onClick={() => setMobileOpen(false)}
                   className="text-primary hover:bg-accent flex items-center gap-2 rounded-md px-3 py-3 text-xs font-medium tracking-widest uppercase transition-colors"
                 >
-                  <Download size={13} /> View Resume
+                  <Download size={13} /> Открыть резюме
                 </a>
               )}
             </div>

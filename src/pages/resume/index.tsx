@@ -114,7 +114,7 @@ function ExperienceBlock() {
     return null;
   return (
     <div className="mb-6">
-      <SectionLabel>Experience</SectionLabel>
+      <SectionLabel>Опыт работы</SectionLabel>
       <div className="space-y-4">
         {config.experience.map((job, i) => (
           <div key={i} className="break-inside-avoid">
@@ -162,7 +162,7 @@ function ProjectsBlock({ condensed = false }: { condensed?: boolean }) {
   if (!shown.length) return null;
   return (
     <div className="mb-6">
-      <SectionLabel>Projects</SectionLabel>
+      <SectionLabel>Проекты</SectionLabel>
       <div className="space-y-3">
         {shown.map((proj, i) => (
           <div key={i} className="break-inside-avoid">
@@ -205,7 +205,7 @@ function SkillsBlock() {
   if (!isSectionVisible('skills') || !config.skills?.length) return null;
   return (
     <div className="mb-5">
-      <SectionLabel>Skills</SectionLabel>
+      <SectionLabel>Навыки</SectionLabel>
       <div className="space-y-1.5">
         {config.skills.map((cat) => (
           <div
@@ -229,7 +229,7 @@ function EducationBlock() {
   if (!isSectionVisible('education') || !config.education?.length) return null;
   return (
     <div className="mb-5">
-      <SectionLabel>Education</SectionLabel>
+      <SectionLabel>Образование</SectionLabel>
       <div className="space-y-2">
         {config.education.map((edu, i) => (
           <div key={i} className="break-inside-avoid">
@@ -256,7 +256,7 @@ function CertificationsBlock() {
     return null;
   return (
     <div className="mb-5">
-      <SectionLabel>Certifications</SectionLabel>
+      <SectionLabel>Сертификаты</SectionLabel>
       <div className="space-y-1.5">
         {config.certifications.map((cert, i) => (
           <div key={i} className="flex break-inside-avoid items-start gap-2">
@@ -282,7 +282,7 @@ function LanguagesBlock() {
   if (!config.languages?.length) return null;
   return (
     <div className="mb-5">
-      <SectionLabel>Languages</SectionLabel>
+      <SectionLabel>Языки</SectionLabel>
       <div className="space-y-1">
         {config.languages.map((lang) => (
           <div
@@ -303,7 +303,7 @@ function PublicationsBlock() {
   if (!isSectionVisible('publications') || !pubs.length) return null;
   return (
     <div className="mb-6">
-      <SectionLabel>Publications</SectionLabel>
+      <SectionLabel>Публикации</SectionLabel>
       <div className="space-y-3">
         {pubs.map((pub, i) => (
           <div key={i} className="break-inside-avoid">
@@ -351,7 +351,7 @@ function AboutBlock() {
   if (!isSectionVisible('about') || !config.about) return null;
   return (
     <div className="mb-6">
-      <SectionLabel>Summary</SectionLabel>
+      <SectionLabel>Кратко о себе</SectionLabel>
       <p className="text-muted-foreground text-xs leading-relaxed">
         {config.about}
       </p>
@@ -451,7 +451,7 @@ export function ResumePage({ theme, onToggleTheme }: ResumePageProps) {
           className="text-muted-foreground hover:text-foreground flex items-center gap-1.5 text-xs font-medium transition-colors"
         >
           <ArrowLeft size={13} />
-          Portfolio
+          Портфолио
         </a>
 
         {/* Layout switcher */}
@@ -467,7 +467,7 @@ export function ResumePage({ theme, onToggleTheme }: ResumePageProps) {
             }`}
           >
             <Columns2 size={13} />
-            <span className="hidden sm:inline">Two Column</span>
+            <span className="hidden sm:inline">Две колонки</span>
           </button>
           <button
             onClick={() => setAndStore('classic')}
@@ -480,7 +480,7 @@ export function ResumePage({ theme, onToggleTheme }: ResumePageProps) {
             }`}
           >
             <AlignJustify size={13} />
-            <span className="hidden sm:inline">Classic</span>
+            <span className="hidden sm:inline">Классика</span>
           </button>
         </div>
 
@@ -492,14 +492,14 @@ export function ResumePage({ theme, onToggleTheme }: ResumePageProps) {
             className="border-border text-muted-foreground hover:text-foreground hover:border-primary/40 flex items-center gap-1.5 rounded-full border px-3.5 py-2 text-xs font-medium transition-all"
           >
             <Share2 size={13} />
-            <span className="hidden sm:inline">Share</span>
+            <span className="hidden sm:inline">Поделиться</span>
           </button>
           <button
             onClick={() => window.print()}
             className="bg-primary text-primary-foreground flex items-center gap-1.5 rounded-full px-4 py-2 text-xs font-medium tracking-wide transition-opacity hover:opacity-90"
           >
             <Printer size={13} />
-            Save PDF
+            Сохранить PDF
           </button>
         </div>
       </div>

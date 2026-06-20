@@ -89,7 +89,7 @@ function SectionWrapper({
                 className="flex items-center gap-1.5 text-green-500"
               >
                 <Check size={11} strokeWidth={2.5} />
-                Copied!
+                Скопировано!
               </motion.span>
             ) : (
               <motion.span
@@ -101,7 +101,7 @@ function SectionWrapper({
                 className="flex items-center gap-1.5"
               >
                 <Link2 size={11} />
-                Copy link
+                Скопировать ссылку
               </motion.span>
             )}
           </AnimatePresence>
@@ -147,7 +147,7 @@ export function PortfolioPage({
             className="text-muted-foreground/60 hover:text-muted-foreground inline-flex items-center gap-1.5 text-[11px] transition-colors"
           >
             <Link2 size={10} />
-            Made with GitVitae
+            Сделано на GitVitae
           </a>
         </footer>
       )}

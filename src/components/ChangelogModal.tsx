@@ -200,7 +200,7 @@ export function ChangelogModal({ open, onClose }: Props) {
                   id="changelog-title"
                   className="text-foreground text-sm font-semibold"
                 >
-                  What's new in GitVitae
+                  Что нового в GitVitae
                 </span>
                 {refreshing && (
                   <RefreshCw
@@ -216,7 +216,7 @@ export function ChangelogModal({ open, onClose }: Props) {
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-foreground flex items-center gap-1 text-xs transition-colors"
                 >
-                  View on GitHub <ExternalLink size={11} />
+                  Открыть на GitHub <ExternalLink size={11} />
                 </a>
                 <button
                   onClick={onClose}

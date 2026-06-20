@@ -16,7 +16,7 @@ export function Experience() {
           viewport={{ once: true, margin: '-80px' }}
           className="text-primary mb-4 font-mono text-xs font-medium tracking-widest uppercase"
         >
-          Career
+          Карьера
         </motion.p>
         <motion.h2
           variants={fadeUp}
@@ -26,7 +26,7 @@ export function Experience() {
           viewport={{ once: true, margin: '-80px' }}
           className="section-heading text-foreground mb-14 text-4xl md:text-5xl"
         >
-          Work Experience
+          Опыт работы
         </motion.h2>
 
         <div className="relative">

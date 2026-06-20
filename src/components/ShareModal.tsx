@@ -18,7 +18,7 @@ interface ShareModalProps {
 function CopyButton({
   text,
   label,
-  copiedLabel = 'Copied!',
+  copiedLabel = 'Скопировано!',
   compact = false,
 }: {
   text: string;
@@ -88,8 +88,8 @@ export function ShareModal({ open, onClose }: ShareModalProps) {
   };
 
   const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(portfolioUrl)}`;
-  const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(`Check out my portfolio 👋`)}&url=${encodeURIComponent(portfolioUrl)}`;
-  const emailUrl = `mailto:?subject=${encodeURIComponent(`${config.name}'s Portfolio`)}&body=${encodeURIComponent(`Hi,\n\nCheck out my portfolio:\n${portfolioUrl}`)}`;
+  const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(`Посмотрите моё портфолио 👋`)}&url=${encodeURIComponent(portfolioUrl)}`;
+  const emailUrl = `mailto:?subject=${encodeURIComponent(`Портфолио — ${config.name}`)}&body=${encodeURIComponent(`Привет,\n\nПосмотрите моё портфолио:\n${portfolioUrl}`)}`;
 
   const emailSignature = [
     `<table cellpadding="0" cellspacing="0" style="font-family:Arial,sans-serif;font-size:14px;color:#333333;">`,
@@ -111,7 +111,7 @@ export function ShareModal({ open, onClose }: ShareModalProps) {
       <DialogContent className="max-h-[85vh] max-w-md overflow-hidden">
         <DialogHeader>
           <DialogTitle className="text-base font-medium">
-            Share your portfolio
+            Поделиться портфолио
           </DialogTitle>
         </DialogHeader>
 
@@ -119,7 +119,7 @@ export function ShareModal({ open, onClose }: ShareModalProps) {
           {/* ── Portfolio link ─────────────────────────── */}
           <div>
             <p className="text-muted-foreground mb-2 flex items-center gap-1.5 font-mono text-xs tracking-widest uppercase">
-              <Link2 size={11} /> Portfolio link
+              <Link2 size={11} /> Ссылка на портфолио
             </p>
             <div className="bg-secondary border-border flex items-center gap-2 rounded-xl border px-3 py-2.5">
               <span className="text-foreground flex-1 truncate font-mono text-xs">
@@ -142,7 +142,7 @@ export function ShareModal({ open, onClose }: ShareModalProps) {
           {/* ── Social share ───────────────────────────── */}
           <div>
             <p className="text-muted-foreground mb-2 font-mono text-xs tracking-widest uppercase">
-              Share on
+              Поделиться через
             </p>
             <div className="flex flex-wrap gap-2">
               <a
@@ -173,7 +173,7 @@ export function ShareModal({ open, onClose }: ShareModalProps) {
           {/* ── QR Code ────────────────────────────────── */}
           <div>
             <p className="text-muted-foreground mb-2 flex items-center gap-1.5 font-mono text-xs tracking-widest uppercase">
-              <QrCode size={11} /> QR code
+              <QrCode size={11} /> QR-код
             </p>
             <div className="bg-secondary border-border flex items-center gap-4 rounded-xl border p-3">
               {qrDataUrl ? (
@@ -187,15 +187,15 @@ export function ShareModal({ open, onClose }: ShareModalProps) {
               )}
               <div className="flex flex-col gap-2">
                 <p className="text-muted-foreground text-xs leading-relaxed">
-                  Put this on your business card, LinkedIn banner, or conference
-                  badge.
+                  Разместите на визитке, в баннере LinkedIn или бейдже на
+                  конференции.
                 </p>
                 <button
                   onClick={downloadQR}
                   disabled={!qrDataUrl}
                   className="border-border hover:bg-background hover:border-primary/40 flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-xs font-medium transition-all disabled:opacity-40"
                 >
-                  <Download size={12} /> Download PNG
+                  <Download size={12} /> Скачать PNG
                 </button>
               </div>
             </div>
@@ -203,7 +203,7 @@ export function ShareModal({ open, onClose }: ShareModalProps) {
 
           <div>
             <p className="text-muted-foreground mb-2 flex items-center gap-1.5 font-mono text-xs tracking-widest uppercase">
-              <Mail size={11} /> Email signature
+              <Mail size={11} /> Email-подпись
             </p>
             <div className="bg-secondary border-border rounded-xl border p-3">
               <div className="bg-background border-border/60 mb-2.5 rounded-lg border p-2.5 text-xs">
@@ -219,10 +219,10 @@ export function ShareModal({ open, onClose }: ShareModalProps) {
                   className="text-primary"
                   onClick={(e) => e.preventDefault()}
                 >
-                  🌐 Portfolio
+                  🌐 Портфолио
                 </a>
               </div>
-              <CopyButton text={emailSignature} label="Copy HTML" />
+              <CopyButton text={emailSignature} label="Скопировать HTML" />
             </div>
           </div>
         </div>

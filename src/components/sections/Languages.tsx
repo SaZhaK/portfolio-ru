@@ -12,10 +12,10 @@ const LEVEL_DOTS: Record<string, number> = {
 };
 
 const LEVEL_LABEL: Record<string, string> = {
-  native: 'Native',
-  fluent: 'Fluent',
-  conversational: 'Conversational',
-  basic: 'Basic',
+  native: 'Родной',
+  fluent: 'Свободный',
+  conversational: 'Разговорный',
+  basic: 'Базовый',
 };
 
 function ProficiencyDots({ level }: { level: string }) {
@@ -53,7 +53,7 @@ export function Languages() {
           viewport={{ once: true, margin: '-80px' }}
           className="text-primary mb-4 font-mono text-xs font-medium tracking-widest uppercase"
         >
-          Communication
+          Коммуникация
         </motion.p>
         <motion.h2
           variants={fadeUp}
@@ -63,7 +63,7 @@ export function Languages() {
           viewport={{ once: true, margin: '-80px' }}
           className="section-heading text-foreground mb-14 text-4xl md:text-5xl"
         >
-          Languages
+          Языки
         </motion.h2>
 
         <div className="flex flex-wrap gap-4">

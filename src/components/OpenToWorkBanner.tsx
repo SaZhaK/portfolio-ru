@@ -38,21 +38,21 @@ export function OpenToWorkBanner({
           </span>
 
           <span className="text-[11px] font-semibold tracking-widest uppercase">
-            Open to opportunities
+            Открыт к предложениям
           </span>
 
           <span className="text-primary-foreground/50 hidden sm:inline">·</span>
 
           <span className="text-primary-foreground/75 hidden text-[11px] sm:inline">
-            Available for full-time roles &amp; freelance projects
+            Рассматриваю full-time и фриланс-проекты
           </span>
 
           <a
-            href={`mailto:${config.email}?subject=Opportunity for ${config.name}`}
+            href={`mailto:${config.email}?subject=Предложение для ${config.name}`}
             className="bg-primary-foreground/15 hover:bg-primary-foreground/25 border-primary-foreground/20 ml-1 flex items-center gap-1.5 rounded-full border px-3 py-1 text-[11px] font-semibold tracking-widest whitespace-nowrap uppercase transition-colors"
           >
             <Mail size={11} />
-            Get in touch
+            Связаться
           </a>
 
           <button

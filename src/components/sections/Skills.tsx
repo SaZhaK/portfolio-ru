@@ -16,7 +16,7 @@ export function Skills() {
           viewport={{ once: true, margin: '-80px' }}
           className="text-primary mb-4 font-mono text-xs font-medium tracking-widest uppercase"
         >
-          Toolbox
+          Инструменты
         </motion.p>
         <motion.h2
           variants={fadeUp}
@@ -26,7 +26,7 @@ export function Skills() {
           viewport={{ once: true, margin: '-80px' }}
           className="section-heading text-foreground mb-14 text-4xl md:text-5xl"
         >
-          Skills &amp; Technologies
+          Навыки и технологии
         </motion.h2>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

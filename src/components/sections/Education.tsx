@@ -19,7 +19,7 @@ export function Education() {
           viewport={{ once: true, margin: '-80px' }}
           className="text-primary mb-4 font-mono text-xs font-medium tracking-widest uppercase"
         >
-          Education
+          Образование
         </motion.p>
         <motion.h2
           variants={fadeUp}
@@ -29,7 +29,7 @@ export function Education() {
           viewport={{ once: true, margin: '-80px' }}
           className="section-heading text-foreground mb-10 text-4xl md:text-5xl"
         >
-          Academic Background
+          Учебный путь
         </motion.h2>
 
         <div className="flex flex-col gap-4">

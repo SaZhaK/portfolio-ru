@@ -130,7 +130,7 @@ export function Hero() {
           {config.openToWork && (
             <span className="inline-flex items-center gap-1.5 rounded-full border border-green-500/20 bg-green-500/10 px-3 py-1 text-xs font-medium tracking-wide text-green-600 uppercase dark:text-green-400">
               <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-green-500" />
-              Open to opportunities
+              Открыт к предложениям
             </span>
           )}
 
@@ -228,7 +228,7 @@ export function Hero() {
             className="bg-primary text-primary-foreground rounded-xl px-7 py-3 text-sm font-medium tracking-wide transition-opacity hover:opacity-90"
             data-testid="button-view-work"
           >
-            View My Work
+            Мои проекты
           </a>
           <a
             href="#/resume"
@@ -236,7 +236,7 @@ export function Hero() {
             data-testid="button-view-resume"
           >
             <Download size={14} />
-            View Resume
+            Открыть резюме
           </a>
         </motion.div>
       </motion.div>

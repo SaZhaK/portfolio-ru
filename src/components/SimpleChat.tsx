@@ -17,7 +17,7 @@ import {
 
 export function SimpleChat() {
   const MAX_CONVERSATION_PAIRS = 5; // Keep last 5 user/assistant exchanges
-  const greetingText = `Hi! I'm ${config.name}'s AI representative. Ask me anything about their experience, skills, or projects!`;
+  const greetingText = `Привет! Я — ИИ-представитель ${config.name}. Спросите меня об опыте, навыках или проектах!`;
   
   const [messages, setMessages] = React.useState<ChatMessage[]>([
     {
@@ -146,7 +146,7 @@ export function SimpleChat() {
         ...prev,
         {
           role: 'assistant',
-          content: `Sorry, I encountered an error: ${error instanceof Error ? error.message : 'Unknown error'}`,
+          content: `Извините, произошла ошибка: ${error instanceof Error ? error.message : 'Неизвестная ошибка'}`,
         },
       ]);
     } finally {
@@ -180,7 +180,7 @@ export function SimpleChat() {
               <Bot size={16} />
             </AvatarFallback>
           </Avatar>
-          <span className="text-sm font-semibold">AI Assistant</span>
+          <span className="text-sm font-semibold">ИИ-ассистент</span>
         </div>
         <Button
           variant="ghost"
@@ -199,10 +199,10 @@ export function SimpleChat() {
             <Loader2 size={16} className="animate-spin" />
             <span className="text-sm font-medium">
               {webLLMStatus.progress === 0
-                ? 'Initializing AI...'
+                ? 'Инициализация ИИ...'
                 : webLLMStatus.progress && webLLMStatus.progress < 100
-                  ? `Loading model: ${webLLMStatus.progress}%`
-                  : 'Finalizing setup...'}
+                  ? `Загрузка модели: ${webLLMStatus.progress}%`
+                  : 'Завершение настройки...'}
             </span>
           </div>
           {webLLMStatus.progress !== undefined && webLLMStatus.progress > 0 && (
@@ -217,7 +217,7 @@ export function SimpleChat() {
             <X size={16} className="text-destructive mt-0.5" />
             <div>
               <p className="text-destructive text-sm font-medium">
-                AI Unavailable
+                ИИ недоступен
               </p>
               <p className="text-muted-foreground mt-1 text-xs">
                 {webLLMStatus.error}
@@ -230,9 +230,9 @@ export function SimpleChat() {
       {/* Disclaimer */}
       <div className="border-b border-amber-200 bg-amber-50 px-4 py-2 dark:border-amber-800/30 dark:bg-amber-900/20">
         <p className="text-xs text-amber-700 dark:text-amber-600">
-          ⚠️ <span className="font-medium">Disclaimer:</span> AI-generated
-          answers may contain errors. Please verify important information
-          independently.
+          ⚠️ <span className="font-medium">Внимание:</span> ответы ИИ могут
+          содержать ошибки. Пожалуйста, проверяйте важную информацию из других
+          источников.
         </p>
       </div>
 
@@ -296,7 +296,7 @@ export function SimpleChat() {
               <div className="bg-muted text-muted-foreground max-w-[80%] rounded-2xl rounded-tl-none px-4 py-2 text-sm">
                 <div className="flex items-center gap-2">
                   <Loader2 size={14} className="animate-spin" />
-                  <span>Thinking...</span>
+                  <span>Думаю...</span>
                 </div>
               </div>
             </div>
@@ -316,10 +316,10 @@ export function SimpleChat() {
           <Input
             placeholder={
               webLLMStatus.status === 'error'
-                ? 'AI unavailable...'
+                ? 'ИИ недоступен...'
                 : webLLMStatus.status === 'loading'
-                  ? 'Loading AI model...'
-                  : `Ask about ${config.name}'s experience...`
+                  ? 'Загрузка модели ИИ...'
+                  : `Спросите об опыте — ${config.name}...`
             }
             value={input}
             onChange={(e) => setInput(e.target.value)}

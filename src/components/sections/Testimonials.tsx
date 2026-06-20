@@ -91,7 +91,7 @@ export function Testimonials() {
           viewport={{ once: true, margin: '-80px' }}
           className="text-primary mb-4 font-mono text-xs font-medium tracking-widest uppercase"
         >
-          Testimonials
+          Отзывы
         </motion.p>
         <motion.h2
           variants={fadeUp}
@@ -101,7 +101,7 @@ export function Testimonials() {
           viewport={{ once: true, margin: '-80px' }}
           className="section-heading text-foreground mb-10 text-4xl md:text-5xl"
         >
-          What People Say
+          Что обо мне говорят
         </motion.h2>
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

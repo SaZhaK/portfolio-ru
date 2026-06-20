@@ -6,11 +6,11 @@ import { fadeUpVariants } from '@/lib/animation';
 const fadeUp = fadeUpVariants(44, 0.75, 0.12);
 
 const TYPE_LABELS: Record<string, string> = {
-  journal: 'Journal',
-  conference: 'Conference',
-  preprint: 'Preprint',
-  'book-chapter': 'Book Chapter',
-  workshop: 'Workshop',
+  journal: 'Журнал',
+  conference: 'Конференция',
+  preprint: 'Препринт',
+  'book-chapter': 'Глава книги',
+  workshop: 'Воркшоп',
 };
 
 export function Publications() {
@@ -28,7 +28,7 @@ export function Publications() {
           viewport={{ once: true, margin: '-80px' }}
           className="text-primary mb-4 font-mono text-xs font-medium tracking-widest uppercase"
         >
-          Research
+          Исследования
         </motion.p>
         <motion.h2
           variants={fadeUp}
@@ -38,7 +38,7 @@ export function Publications() {
           viewport={{ once: true, margin: '-80px' }}
           className="section-heading text-foreground mb-14 text-4xl md:text-5xl"
         >
-          Publications
+          Публикации
         </motion.h2>
 
         <div className="space-y-4">

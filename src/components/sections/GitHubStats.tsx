@@ -83,9 +83,9 @@ export function GitHubStats() {
 
   const stats = data
     ? [
-        { icon: Star, label: 'Stars earned', value: data.totalStars },
-        { icon: Users, label: 'Followers', value: data.followers },
-        { icon: BookOpen, label: 'Public repos', value: data.publicRepos },
+        { icon: Star, label: 'Полученные звёзды', value: data.totalStars },
+        { icon: Users, label: 'Подписчики', value: data.followers },
+        { icon: BookOpen, label: 'Публичных репозиториев', value: data.publicRepos },
       ]
     : [];
 
@@ -101,7 +101,7 @@ export function GitHubStats() {
           viewport={{ once: true, margin: '-80px' }}
           className="text-primary mb-4 font-mono text-xs font-medium tracking-widest uppercase"
         >
-          Open source
+          Open Source
         </motion.p>
         <div className="mb-14 flex flex-wrap items-start justify-between gap-4">
           <motion.h2
@@ -112,7 +112,7 @@ export function GitHubStats() {
             viewport={{ once: true, margin: '-80px' }}
             className="section-heading text-foreground text-4xl md:text-5xl"
           >
-            GitHub Activity
+            Активность на GitHub
           </motion.h2>
           {data && (
             <motion.a
@@ -127,7 +127,7 @@ export function GitHubStats() {
               className="text-muted-foreground hover:text-primary inline-flex items-center gap-2 text-sm font-medium transition-colors"
             >
               <FaGithub size={16} />
-              View profile
+              Перейти к профилю
               <ExternalLink size={12} />
             </motion.a>
           )}
@@ -180,7 +180,7 @@ export function GitHubStats() {
             className="border-border bg-background rounded-2xl border p-8"
           >
             <p className="text-muted-foreground mb-6 font-mono text-xs font-medium tracking-widest uppercase">
-              Top languages
+              Топ-языки
             </p>
 
             {loading ? (
@@ -237,7 +237,7 @@ export function GitHubStats() {
         {/* Rate-limit notice */}
         {error === 'rate-limited' && (
           <p className="text-muted-foreground mt-6 text-center text-sm">
-            GitHub API rate limit reached — stats will appear on next load.
+            Превышен лимит запросов к GitHub — статистика появится при следующей загрузке.
           </p>
         )}
       </div>

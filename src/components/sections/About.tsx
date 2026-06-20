@@ -112,16 +112,16 @@ export function About() {
     config.stats.length > 0
       ? config.stats.slice(0, 4)
       : [
-          { label: 'Years Experience', value: 5, prefix: '', suffix: '+' },
-          { label: 'Projects Shipped', value: 20, prefix: '', suffix: '+' },
+          { label: 'Лет опыта', value: 5, prefix: '', suffix: '+' },
+          { label: 'Реализовано проектов', value: 20, prefix: '', suffix: '+' },
           {
-            label: 'Technologies',
+            label: 'Технологий',
             value: config.skills.reduce((acc, s) => acc + s.items.length, 0),
             prefix: '',
             suffix: '+',
           },
           {
-            label: 'Cups of Coffee',
+            label: 'Чашек кофе',
             value: '∞' as unknown as number,
             prefix: '',
             suffix: '',
@@ -146,7 +146,7 @@ export function About() {
               viewport={{ once: true, margin: '-80px' }}
               className="text-primary mb-4 font-mono text-xs font-medium tracking-widest uppercase"
             >
-              About Me
+              Обо мне
             </motion.p>
             <motion.h2
               variants={fadeUp}
@@ -156,9 +156,9 @@ export function About() {
               viewport={{ once: true, margin: '-80px' }}
               className="section-heading text-foreground mb-6 text-4xl leading-tight md:text-5xl"
             >
-              The person behind
+              Человек
               <br />
-              <em className="font-light not-italic">the keyboard.</em>
+              <em className="font-light not-italic">за клавиатурой.</em>
             </motion.h2>
             <motion.div
               variants={fadeUp}
@@ -210,7 +210,7 @@ export function About() {
               >
                 <div className="text-muted-foreground mb-3 flex items-center gap-1.5 font-mono text-xs font-medium tracking-widest uppercase">
                   <Globe size={12} />
-                  Languages
+                  Языки
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {config.languages.map((lang) => (

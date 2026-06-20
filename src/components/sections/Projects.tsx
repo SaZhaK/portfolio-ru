@@ -20,7 +20,7 @@ export function Projects() {
           viewport={{ once: true, margin: '-80px' }}
           className="text-primary mb-4 font-mono text-xs font-medium tracking-widest uppercase"
         >
-          Work
+          Работы
         </motion.p>
         <motion.h2
           variants={fadeUp}
@@ -30,7 +30,7 @@ export function Projects() {
           viewport={{ once: true, margin: '-80px' }}
           className="section-heading text-foreground mb-14 text-4xl md:text-5xl"
         >
-          Featured Projects
+          Избранные проекты
         </motion.h2>
 
         {/* Featured — large cards */}
@@ -105,7 +105,7 @@ export function Projects() {
               viewport={{ once: true, margin: '-60px' }}
               className="text-muted-foreground mb-6 font-mono text-xs font-medium tracking-widest uppercase"
             >
-              Other Projects
+              Другие проекты
             </motion.h3>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {others.map((project, i) => (

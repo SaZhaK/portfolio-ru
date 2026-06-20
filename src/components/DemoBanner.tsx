@@ -34,12 +34,12 @@ export function DemoBanner({ onDismiss }: DemoBannerProps) {
           <GitFork size={12} className="shrink-0 opacity-70" />
 
           <span className="hidden opacity-80 sm:inline">
-            Live demo of{' '}
-            <span className="font-semibold text-white">GitVitae</span> — a free,
-            open-source portfolio template.
+            Демо-версия{' '}
+            <span className="font-semibold text-white">GitVitae</span> — бесплатного
+            open-source шаблона портфолио.
           </span>
           <span className="font-semibold text-white opacity-80 sm:hidden">
-            GitVitae demo
+            Демо GitVitae
           </span>
 
           <a
@@ -48,7 +48,7 @@ export function DemoBanner({ onDismiss }: DemoBannerProps) {
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[11px] font-semibold tracking-widest whitespace-nowrap uppercase transition-colors hover:bg-white/20"
           >
-            Use this template →
+            Использовать шаблон →
           </a>
 
           <button
