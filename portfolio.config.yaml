@@ -148,7 +148,7 @@ skills:
 # ── Experience ─────────────────────────────────────────────────────────
 experience:
   - company: "Солантек"
-    role: "Java/Kotlin Sotfware Engineer"
+    role: "Java/Kotlin Software Engineer"
     period: "2021 – Настоящее время"
     description: |
       Разрабатывал высоконагруженную систему тестирования электронных платежей для банков из ТОП‑10 на Java 17 и Kotlin. Проектировал SOA‑архитектуру, реализовывал протокольные сервисы (gRPC, SOAP, TCP) и интеграционные шины. Работал с PostgreSQL и Oracle через Hibernate — оптимизировал запросы и устранял N+1 проблемы.
