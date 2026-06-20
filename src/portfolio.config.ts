@@ -47,7 +47,12 @@ const rawConfig = rawConfigYaml as unknown as {
     repoUrl: string;
     featured: boolean;
   }[];
-  education: { institution: string; degree: string; period: string }[];
+  education: {
+    institution: string;
+    degree: string;
+    specialty?: string;
+    period: string;
+  }[];
   certifications: {
     title: string;
     issuer: string;

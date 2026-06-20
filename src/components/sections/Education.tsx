@@ -51,6 +51,11 @@ export function Education() {
                 <h3 className="text-foreground font-serif text-xl font-light">
                   {edu.degree}
                 </h3>
+                {edu.specialty && (
+                  <p className="text-muted-foreground mt-0.5 text-sm tracking-wide">
+                    {edu.specialty}
+                  </p>
+                )}
                 <p className="text-muted-foreground mt-0.5 text-sm tracking-wide">
                   {edu.institution}
                 </p>
