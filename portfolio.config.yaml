@@ -129,19 +129,19 @@ languages:
 # ── Skills ─────────────────────────────────────────────────────────────
 skills:
   - category: "Архитектура"
-    items: [SOA, DDD, Clean Architecture, Layered Architecture]
+    items: [DDD, SOA, Clean Architecture, Layered Architecture]
   - category: "Языки"
-    items: [Java, Kotlin, Python, JavaScript (TypeScript)]
+    items: [Java, Kotlin, Python, JavaScript]
   - category: "Фреймворки"
     items: [Spring Framework 5.x, Spring Boot 3.x, JPA / Hibernate, Angular]
   - category: "Веб"
-    items: [REST, SOAP, gRPC, TCP, ISO 8583, UAMP, MessagePack]
+    items: [REST, SOAP, HTTP, gRPC, TCP, ISO 8583, UAMP, MessagePack, Swagger]
   - category: "Базы данных"
-    items: [PostgreSQL, Oracle, Liquibase]
+    items: [PostgreSQL, Oracle, MySQL, Liquibase]
   - category: "Messaging"
     items: [RabbitMQ, Kafka, JMS, MQTT]
   - category: "DevOps / Инфраструктура"
-    items: [Docker, TeamCity, GitLab CI, GitHub Actions, Nexus, Maven]
+    items: [Docker, TeamCity, GitLab CI, GitHub Actions, Nexus, Maven, Amazon S3]
   - category: "Тестирование"
     items: [JUnit, Mockito, Testcontainers, Selenium]
 
@@ -152,20 +152,17 @@ experience:
     period: "2021 – Настоящее время"
     description: |
       Разрабатывал высоконагруженную систему тестирования электронных платежей для банков из ТОП‑10 на Java 17 и Kotlin. Проектировал SOA‑архитектуру, реализовывал протокольные сервисы (gRPC, SOAP, TCP) и интеграционные шины. Работал с PostgreSQL и Oracle через Hibernate — оптимизировал запросы и устранял N+1 проблемы.
-      Замещал Team Lead команды из 10 человек: проводил daily, planning, оценивал архитектурные решения, занимался онбордингом новичков. Организовал цикл лекций по ключевым модулям, снизив bus factor с 2 до 5 разработчиков. Обучил 3 стажёров, двое из которых впоследствии вошли в основной состав.
-      С нуля построил эмулятор СБП с нагрузкой 1000+ TPS — продукт внедрён в 3 банка из ТОП‑10. Спроектировал модуль аудита с доставкой событий через Kafka. Разработал S3‑адаптер (Amazon S3, Ceph S3), который приняли 8 команд. В инициативном порядке создал поиск по 700+ GitLab‑репозиториям на Lucene — сервис используют 150+ сотрудников.
+      Замещал Team Lead команды из 10 человек: проводил daily, planning poker, оценивал архитектурные решения, занимался онбордингом новичков. Организовал цикл лекций по ключевым модулям, снизив bus factor с 2 до 5 разработчиков. Обучил 3 стажёров, двое из которых впоследствии вошли в основной состав команды.
+      С нуля построил эмулятор СБП с нагрузкой 1000+ TPS — продукт внедрён в 3 банка из ТОП‑10. Спроектировал модуль аудита с доставкой событий во внешние системы. Разработал S3‑адаптер (Amazon S3, Ceph S3), который приняли 8 команд. В инициативном порядке создал сервис поиска по 700+ GitLab‑репозиториям с помощью Lucene, который используется 150+ сотрудниками.
     highlights:
       - FinTech
-      - Java
-      - Kotlin
-      - Spring Boot
-      - PostgreSQL
-      - Kafka
-      - gRPC
       - Team Leadership
       - System Design (SOA/DDD)
-      - S3
-      - Lucene
+      - Java
+      - Kotlin
+      - Spring Framework
+      - Amazon S3
+      - Apache Lucene
 
   - company: "CapyPrint (Стартап)"
     role: "Co-founder & CTO / Technical Lead"
@@ -174,76 +171,51 @@ experience:
       Со‑основатель стартапа по автоматизированной печати. В одиночку спроектировал и реализовал full‑stack систему: бэкенд на Java/Kotlin, фронтенд на Angular, ПО для Raspberry Pi на Python, интеграцию с Telegram Bot API и платёжным шлюзом ЮKassa. Организовал связь терминалов с облаком через MQTT.
       Собрал и возглавил команду из 4 разработчиков, выстроил все процессы с нуля. За 2 месяца довёл продукт до работающего MVP, что позволило привлечь грант Фонда содействия инновациям на 1 млн рублей и заключить 2 пилотных соглашения с реальными клиентами. Настроил CI/CD через GitHub Actions, обеспечив предсказуемый релизный цикл.
     highlights:
+      - IoT
       - Startup
-      - IoT (Raspberry Pi / Python)
-      - Full‑Stack (Java + Angular)
+      - Full‑stack development
       - Team Building
-      - MVP in 2 months
-      - Government Grant
-      - MQTT
+      - Government funding
       - Telegram Bot API
-      - Payment Integration (ЮKassa)
+      - Payment Integration
 
   - company: "Ланит-Терком"
     role: "Java Developer"
     period: "2021-02 – 2021-06"
     description: |
-      Разрабатывал бэкенд образовательного сервиса для подготовки к собеседованиям на Java 11 и Spring Boot с хранением данных в MySQL. Самостоятельно спроектировал схему БД и архитектуру сервиса, описал REST API через Swagger и интегрировал его с фронтендом без доработок на этапе стыковки.
-      Обеспечил покрытие кодовой базы юнит‑тестами свыше 50%, что сократило число регрессионных багов. Разработал и опубликовал в корпоративном Maven‑репозитории библиотеку‑обёртку над Java IO/NIO — инструмент приняли две смежные команды, он упростил файловые операции на других проектах.
+      Разрабатывал бэкенд образовательного сервиса для подготовки к собеседованиям на Java и Spring с хранением данных в MySQL. Самостоятельно спроектировал схему БД и архитектуру сервиса, описал REST API через Swagger и интегрировал его с фронтендом без доработок на этапе стыковки.
+      Обеспечил покрытие кодовой базы юнит‑тестами свыше 50%, что сократило число регрессионных багов. Разработал и опубликовал в корпоративном Maven‑репозитории библиотеку‑обёртку над Java IO/NIO — инструмент приняли две смежные команды.
     highlights:
       - EdTech
-      - Java
-      - Spring Boot
-      - REST API / Swagger
-      - MySQL / Hibernate
-      - Unit Testing (50%+ coverage)
-      - Library Development (IO/NIO)
       - Layered Architecture
+      - Library Development
+      - Unit Testing
+      - Java
+      - Spring Framework
+      - REST API / Swagger
 
   - company: "Vigo Lab"
     role: "Java Developer (Intern)"
     period: "2020-07 – 2020-08"
     description: |
-      Первая стажировка в системе аналитики качества передачи данных для сотового оператора. Занимался бэкенд‑разработкой на Java 8: внедрял новый функционал, правил баги, писал юнит‑тесты.
+      Первая стажировка в системе аналитики качества передачи данных для сотового оператора. Занимался бэкенд‑разработкой на Java 8: внедрял новую функциональность, правил баги, писал юнит‑тесты.
       Реализовал адаптер для стыковки legacy‑модулей с актуальной версией системы — сохранил работоспособность старого кода без переписывания. Разработал конвертер из JSON в MessagePack, сократив объём передаваемых данных на 10%. Написал скрипты миграции БД, полностью автоматизировав переход на новую структуру хранения и исключив ручные операции в боевом контуре.
     highlights:
       - Telecom (Mobile Networks)
-      - Java
       - Legacy Integration
-      - MessagePack
-      - Data Optimization (-10% size)
       - Database Migration
+      - Data Optimization (-10% size)
+      - Java
 
 # ── Projects ───────────────────────────────────────────────────────────
 # Set featured: true to show in the Featured section (max 3 recommended)
 projects:
-  - name: "OpenDesk"
-    description: "An open-source project management tool built with React and Go. 2.3k GitHub stars. Real-time updates via WebSockets."
+  - name: "example"
+    description: "example"
     tags: [React, Go, WebSockets, PostgreSQL]
     liveUrl: "https://opendesk.example.com"
     repoUrl: "https://github.com/yourusername/opendesk"
     featured: true
-
-  - name: "CodeLens"
-    description: "VS Code extension that uses AI to generate inline documentation. 10k+ installs from the marketplace."
-    tags: [TypeScript, OpenAI, "VS Code API"]
-    liveUrl: ""
-    repoUrl: "https://github.com/yourusername/codelens"
-    featured: true
-
-  - name: "PriceWatch"
-    description: "Browser extension that tracks price history on e-commerce sites and alerts users to drops."
-    tags: [JavaScript, "Chrome API", Node.js]
-    liveUrl: "https://pricewatch.example.com"
-    repoUrl: "https://github.com/yourusername/pricewatch"
-    featured: false
-
-  - name: "Logbook"
-    description: "A minimalist journaling app with end-to-end encryption. Built in a weekend. 500+ users."
-    tags: ["React Native", SQLite, Crypto]
-    liveUrl: ""
-    repoUrl: "https://github.com/yourusername/logbook"
-    featured: false
 
 # ── Education ──────────────────────────────────────────────────────────
 education:
@@ -268,21 +240,13 @@ certifications:
 # Optional — ideal for researchers, academics, and technical writers.
 # type options: conference | journal | preprint | book-chapter | workshop
 publications:
-  - title: "Scaling Real-Time Collaboration in Distributed Systems"
+  - title: "example"
     authors: "Rivera A, Chen L, Patel S"
     venue: "USENIX ATC 2023"
     year: "2023"
     url: "https://arxiv.org/abs/example"
     type: "conference"
     tags: [distributed-systems, real-time, scalability]
-
-  - title: "Micro-Frontend Architecture Patterns for Large-Scale SPAs"
-    authors: "Rivera A"
-    venue: "IEEE Software"
-    year: "2022"
-    url: ""
-    type: "journal"
-    tags: [frontend, architecture, micro-frontends]
 
 # ── Testimonials ───────────────────────────────────────────────────────
 testimonials:
