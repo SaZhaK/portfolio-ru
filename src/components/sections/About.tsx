@@ -15,11 +15,24 @@ const LEVEL_STYLE: Record<string, string> = {
   elementary: 'bg-secondary/60 text-muted-foreground border-border',
 };
 
+const LEVEL_LABEL: Record<string, string> = {
+  native: 'Родной',
+  fluent: 'Свободный',
+  conversational: 'Разговорный',
+  professional: 'Профессиональный',
+  basic: 'Базовый',
+  elementary: 'Начальный',
+};
+
 function levelStyle(level: string) {
   return (
     LEVEL_STYLE[level.toLowerCase()] ??
     'bg-secondary text-foreground border-border'
   );
+}
+
+function levelLabel(level: string) {
+  return LEVEL_LABEL[level.toLowerCase()] ?? level;
 }
 
 // ── Animated counter card ───────────────────────────────────────────────────
@@ -221,7 +234,7 @@ export function About() {
                       {lang.name}
                       <span className="font-normal opacity-60">·</span>
                       <span className="font-normal opacity-75">
-                        {lang.level}
+                        {levelLabel(lang.level)}
                       </span>
                     </span>
                   ))}
