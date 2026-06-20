@@ -32,7 +32,7 @@ function parsePeriod(period = "") {
   const end   = parts[1]?.trim() ?? "";
   return {
     startDate: start,
-    endDate: end.toLowerCase() === "present" ? "" : end,
+    endDate: end.toLowerCase() === "Настоящее время" ? "" : end,
   };
 }
 
